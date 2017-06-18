@@ -1,0 +1,88 @@
+.about{
+  padding: 9rem 0;
+  font-size: 0;
+  position: relative;
+  &:after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: $gray;
+    display: block;
+    content: '';
+  }
+  @include breakpoint (fromContainer){
+    padding: 90px 0;
+  }
+  &__item{
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 3rem;
+    font-family: $myriadRegular;
+    @include breakpoint (fromContainer){
+      font-size: 20px;
+      padding: 0 30px;
+    }
+    &:nth-child(2){
+      h2{
+        padding: 0 5rem;
+        @include breakpoint (fromContainer){
+          padding: 0 50px;
+        }
+      }
+    }
+    &:nth-child(3){
+      h2{
+        padding: 0 2rem;
+        @include breakpoint (fromContainer){
+          padding: 0 20px;
+        }
+        @include breakpoint (phone){
+          padding: 0;
+        }
+      }
+    }
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+    h2{
+      margin: 3.5rem 0;
+      font-size: 2.5rem;
+      line-height: 3.2rem;
+      color: $lightBlack;
+      @include breakpoint (fromContainer){
+        margin: 35px 0;
+        font-size: 25px;
+        line-height: 32px;
+      }
+      @include breakpoint (tablet){
+        font-size: 2.5rem;
+      }
+      @include breakpoint (phone){
+        font-size: 2.7rem;
+      }
+    }
+    p{
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      color: $lightGray;
+      @include breakpoint (fromContainer){
+        font-size: 14px;
+        line-height: 22px;
+      }
+      @include breakpoint (tablet){
+        font-size: 2rem;
+        line-height: 3.2rem;
+      }
+      @include breakpoint (phone){
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+}

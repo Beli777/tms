@@ -1,0 +1,144 @@
+//-------------------------
+//-------------------SLIDER
+//-------------------------
+.slider{
+  &__item{
+    position: relative;
+    img{
+      max-width: none;
+    }
+    &Holder{
+      position: absolute;
+      top: 44.5%;
+      left: 22%;
+      right: 22%;
+      text-align: center;
+      color: $white;
+      @include breakpoint (tablet){
+        top: 39.5%;
+      }
+      @include breakpoint (phone){
+        top: 37.5%;
+      }
+      h1{
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        margin-bottom: 2.5rem;
+        @include breakpoint (fromContainer){
+          font-size: 30px;
+          letter-spacing: 5px;
+          margin-bottom: 25px;
+        }
+        @include breakpoint (tablet){
+          font-size: 4rem;
+        }
+        @include breakpoint (phone){
+          font-size: 5rem;
+        }
+      }
+      h2{
+        font-size: 2rem;
+        line-height: 3.5rem;
+        letter-spacing: 0.12rem;
+        @include breakpoint (fromContainer){
+          font-size: 20px;
+          letter-height: 35px;
+          letter-spacing: 1.2px;
+        }
+        @include breakpoint (tablet){
+          font-size: 2.5rem;
+          line-height: 3.8rem;
+        }
+        @include breakpoint (phone){
+          font-size: 3rem;
+          line-height: 4.5rem;
+        }
+      }
+    }
+  }
+  .slick-prev,
+  .slick-next{
+    position: absolute;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+    top: 41%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: block;
+    content: '';
+    background-size: contain;
+    height: 10rem;
+    width: 6rem;
+    cursor: pointer;
+    outline: none;
+    @include breakpoint (fromContainer){
+      width: 60px;
+      height: 100px;
+    }
+  }
+  .slick-prev{
+    background-image: url(../img/arrow-left.png);
+    left: 3rem;
+    @include breakpoint (fromContainer){
+      left: 30px;
+    }
+  }
+  .slick-next{
+    background-image: url(../img/arrow-right.png);
+    right: 3rem;
+    @include breakpoint (fromContainer){
+    right: 30px;
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    @include breakpoint (fromContainer){
+      bottom: 20px;
+    }
+
+    li{
+      display: inline-block;
+      margin: 0 0.5rem;
+      vertical-align: middle;
+      @include breakpoint (fromContainer){
+        margin: 0 5px;
+        vertical-align: bottom;
+      }
+      @include breakpoint (tablet){
+        margin: 0 1rem;
+      }
+      &.slick-active{
+        margin: 0 0.2rem;
+        @include breakpoint (fromContainer){
+          margin: 0 2px;
+        }
+          button{
+              background-image: url(../img/active.png);
+              width: 18px;
+              height: 18px;
+          }
+      }
+    }
+    button{
+      background-color: transparent;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 0;
+      background-image: url(../img/inactive.png);
+      width: 8px;
+      height: 8px;
+      background-repeat: no-repeat;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

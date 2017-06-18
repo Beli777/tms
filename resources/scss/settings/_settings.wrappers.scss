@@ -1,0 +1,28 @@
+///------------------------------------
+//    #SETTINGS
+//------------------------------------
+
+// Globaly available variables
+
+
+
+
+
+//-------------------------
+//    #Wrapper
+//    Global default settings
+//	  for wrappers
+//-------------------------
+.wrapper{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.innerWrapper{
+  margin: 0 16.2%;
+  @include breakpoint (tablet){
+    margin: 0 6.2%;
+  }
+  @include breakpoint (phone){
+    margin: 0 2rem;
+  }
+}

@@ -1,0 +1,124 @@
+.company{
+  text-align: center;
+  h2{
+    margin-top: 8rem;
+    margin-bottom: 4.5rem;
+    color: $lightBlack;
+    font-size: 3rem;
+    @include breakpoint (fromContainer){
+      font-size: 30px;
+      margin-top: 80px;
+      margin-bottom: 45px;
+    }
+    @include breakpoint (tablet){
+      font-size: 4rem;
+    }
+    @include breakpoint (phone){
+      font-size: 4rem;
+    }
+  }
+  p{
+    color: $lightGray;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 0 7rem;
+    margin-bottom: 6.6rem;
+    @include breakpoint (fromContainer){
+      font-size: 16px;
+      padding: 0 70px;
+      margin-bottom: 66px;
+    }
+    @include breakpoint (tablet){
+      font-size: 2rem;
+      line-height: 3.2rem;
+    }
+    @include breakpoint (phone){
+      font-size: 2.2rem;
+      line-height: 3.2rem;
+    }
+  }
+  &__item{
+    display: inline-block;
+    width: 32.088%;
+    vertical-align: top;
+    position: relative;
+    img{
+      width: 100%;
+    }
+    &:nth-child(3){
+      float: left;
+    }
+    &:nth-child(5){
+      float: right;
+    }
+    h3{
+      font-size: 1.8rem;
+      color: $lightBlack;
+      margin-top: 1.5rem;
+      @include breakpoint (fromContainer){
+        font-size: 18px;
+        margin-top: 15px;
+      }
+      @include breakpoint (tablet){
+        font-size: 2.5rem;
+      }
+      @include breakpoint (phone){
+        font-size: 2.5rem;
+      }
+    }
+    &Mask{
+      position: absolute;
+      bottom: 3.3rem;
+      left: 0;
+      right: 0;
+      top: 0;
+      display: block;
+      content: '';
+      background-color: $lightOrange;
+      opacity: 0;
+      @include transition (.3s all ease-in);
+      @include breakpoint (fromContainer){
+        bottom: 33px;
+      }
+    }
+    &Button{
+      position: absolute;
+      top: 40%;
+      background-color: $lightOrange;
+      padding: 1.2rem 2rem;
+      width: 11.4rem;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      color: $white;
+      font-size: 1.2rem;
+      opacity: 0;
+      @include transition (.3s all ease-in);
+      @include breakpoint (fromContainer){
+        width: 114px;
+        padding: 12px 20px;
+        font-size: 12px;
+      }
+      @include breakpoint (tablet){
+        opacity: 1;
+        width: 14.4rem;
+        font-size: 2rem;
+        top: 35%;
+      }
+      @include breakpoint (phone){
+        top: 33%;
+        font-size: 2rem;
+        width: 16.4rem;
+        opacity: 1;
+      }
+    }
+    &:hover{
+      .company__itemMask{
+        opacity: 0.5;
+      }
+      .company__itemButton{
+        opacity: 1;
+      }
+    }
+  }
+}

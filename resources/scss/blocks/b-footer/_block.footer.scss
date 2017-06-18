@@ -1,0 +1,111 @@
+//-------------------------
+//-------------------FOOTER
+//-------------------------
+.footer {
+  background-color: $footerBlack;
+  padding-top: 4.2rem;
+  padding-bottom: 5.5rem;
+  text-align: center;
+  padding-left: 26.3%;
+  padding-right: 26.3%;
+  margin-top: 7.2rem;
+  @include breakpoint (fromContainer){
+    padding-top: 42px;
+    padding-bottom: 55px;
+    margin-top: 72px;
+  }
+  @include breakpoint (tablet){
+    padding-left: 16.3%;
+    padding-right: 16.3%;
+  }
+  @include breakpoint (phone){
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  p{
+    font-size: 1.2rem;
+    font-family: $myriadBold;
+    color: $white;
+    margin-top: 3.8rem;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+    @include breakpoint (fromContainer){
+      font-size: 12px;
+      margin-top: 38px;
+      line-height: 22px;
+      margin-bottom: 30px;
+    }
+    @include breakpoint (tablet){
+      font-size: 1.8rem;
+    }
+    @include breakpoint (phone){
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+  &__social{
+    border: 1px solid $lightGray;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 1.4rem 0rem;
+    @include breakpoint (fromContainer){
+      max-width: 250px;
+      padding: 14px 0;
+    }
+    @include breakpoint (tablet){
+      max-width: 35rem;
+    }
+    @include breakpoint (phone){
+      max-width: 40rem;
+    }
+    i{
+      font-size: 1.2rem;
+      color: $white;
+      margin: 0 0.7rem;
+      @include transition (.3s all ease-in);
+      @include breakpoint (fromContainer){
+        font-size: 12px;
+        margin: 0 7px;
+      }
+      @include breakpoint (tablet){
+        font-size: 2rem;
+      }
+      @include breakpoint (phone){
+        font-size: 2.5rem;
+      }
+      &:hover{
+        color: $lightOrange;
+      }
+    }
+  }
+  &Bottom{
+    background-color: $footerBottom;
+    text-align: center;
+    li{
+      display: inline-block;
+      padding: 2.5rem 0;
+      margin: 0 1rem;
+      @include breakpoint (fromContainer){
+        padding: 25px 0;
+        margin: 0 10px;
+      }
+      a{
+        font-size: 1.2rem;
+        color: $footerBottomText;
+        @include breakpoint (fromContainer){
+          font-size: 12px;
+        }
+        @include breakpoint (tablet){
+          font-size: 2rem;
+        }
+        @include breakpoint (phone){
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

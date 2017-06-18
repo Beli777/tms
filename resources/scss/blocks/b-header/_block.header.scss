@@ -1,0 +1,137 @@
+//-------------------------
+//-------------------HEADER
+//-------------------------
+.header{
+  padding: 3.7rem 23rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 0;
+  z-index: 10;
+  @include breakpoint (fromContainer){
+    padding: 37px 230px;
+  }
+  @include breakpoint (tablet){
+    padding: 3.7rem 15rem;
+  }
+  @include breakpoint (phone){
+    padding: 3.7rem 2rem;
+  }
+  @include breakpoint (phoneSmall){
+    padding: 2.7rem 2rem;
+  }
+  &__mask{
+    background-color: $black;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  &__block{
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    font-size: 2rem;
+    @include breakpoint (fromContainer){
+      font-size: 20px;
+    }
+    &:nth-child(3){
+      text-align: right;
+    }
+    img{
+      @include breakpoint (phoneSmall){
+        width: 75%;
+      }
+    }
+    ul{
+      padding-right: 1.5rem;
+      @include breakpoint (fromContainer){
+        padding-right: 15px;
+      }
+    }
+    li{
+      display: inline-block;
+      color: $white;
+      font-size: 1.1rem;
+      font-family: $myriadBold;
+      text-transform: uppercase;
+      padding: 0 1.5rem;
+      position: relative;
+      cursor: pointer;
+      @include transition(.3s all ease-in);
+      @include breakpoint (fromContainer){
+        padding: 0 15px;
+        font-size: 11px;
+      }
+      @include breakpoint (tablet){
+        font-size: 1.6rem;
+      }
+      @include breakpoint (phone){
+        font-size: 1.5rem;
+      }
+      &:after{
+        left: 50%;
+        right: 50%;
+        @include transition(.3s all ease-in);
+      }
+      &:before{
+        opacity: 0;
+        @include transition(.3s all ease-in);
+      }
+      &.active{
+        &:before{
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -4rem;
+          top: -5rem;
+          background-color: $black;
+          display: block;
+          content: '';
+          opacity: 1;
+          z-index: -1;
+          @include breakpoint (fromContainer){
+            top: -50px;
+            bottom: -40px;
+          }
+        }
+        &:after{
+          left: 0;
+          right: 0;
+          top: 5.1rem;
+          position: absolute;
+          height: 2px;
+          background-color: $orange;
+          display: block;
+          content: '';
+          @include breakpoint (fromContainer){
+            top: 51px;
+          }
+          @include breakpoint (tablet){
+            top: 5.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+.arrowUp{
+  position: fixed;
+  bottom: 5rem;
+  right: 5%;
+  padding: 2.2rem 2rem;
+  border-radius:5px;
+  background-color: #111111;
+  @include transition (.3s all ease-in);
+  cursor: pointer;
+  &:hover{
+    background-color: $lightOrange;
+  }
+}
